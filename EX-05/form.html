@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Library Management System</title>
+    <script>
+        function validateForm() {
+            const title = document.forms["bookForm"]["title"].value;
+            const author = document.forms["bookForm"]["author"].value;
+            const publisher = document.forms["bookForm"]["publisher"].value;
+            const edition = document.forms["bookForm"]["edition"].value;
+            const price = document.forms["bookForm"]["price"].value;
+
+            if (!title.match(/^[a-zA-Z\s]+$/)) {
+                alert("Title should contain only alphabets and spaces.");
+                return false;
+            }
+            if (!author.match(/^[a-zA-Z\s]+$/)) {
+                alert("Author should contain only alphabets and spaces.");
+                return false;
+            }
+            if (!publisher.match(/^[a-zA-Z\s]+$/)) {
+                alert("Publisher should contain only alphabets and spaces.");
+                return false;
+            }
+            if (!edition.match(/^[a-zA-Z0-9\s]+$/)) {
+                alert("Edition should be alphanumeric.");
+                return false;
+            }
+            if (isNaN(price) || price <= 0) {
+                alert("Price should be a positive number.");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <h2>Library Management System - Book Form</h2>
+    <form name="bookForm" action="BookServlet" method="post" onsubmit="return validateForm()">
+        <label>Book Name:</label>
+        <input type="text" name="title" required><br>
+        <label>Author:</label>
+        <input type="text" name="author" required><br>
+        <label>Publisher:</label>
+        <input type="text" name="publisher" required><br>
+        <label>Edition:</label>
+        <input type="text" name="edition" required><br>
+        <label>Price:</label>
+        <input type="text" name="price" required><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
