@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Information</title>
+    <script>
+        function fetchStudentDetails() {
+            const regNo = document.getElementById("regNoSelect").value;
+            if (regNo) {
+                const xhr = new XMLHttpRequest();
+                xhr.open("GET", "StudentServlet?reg_no=" + regNo, true);
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState === 4 && xhr.status === 200) {
+                        const studentData = JSON.parse(xhr.responseText);
+                        document.getElementById("studentDetails").innerHTML =
+                            `<p>Name: ${studentData.name}</p>
+                             <p>Department: ${studentData.department}</p>
+                             <p>Year: ${studentData.year}</p>
+                             <p>Email: ${studentData.email}</p>`;
+                    }
+                };
+                xhr.send();
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Select a Student by Registration Number</h2>
+    <label for="regNoSelect">Registration Number:</label>
+    <select id="regNoSelect" onchange="fetchStudentDetails()">
+        <option value="">Select a Registration Number</option>
+        <option value="101">101</option>
+        <option value="102">102</option>
+        <option value="103">103</option>
+    </select>
+
+    <h3>Student Details:</h3>
+    <div id="studentDetails">
+        <p>Select a registration number to see details.</p>
+    </div>
+</body>
+</html>
