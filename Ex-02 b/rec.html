@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="rec.css">
+</head>
+
+<body>
+    <header class="header">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/f/f3/Rajalakshmi_Engineering_College_(REC)_Chennai_Logo.jpg" 
+               alt="Brand logo"> 
+                  <span class="brand-logo-name">
+                  Rajalakshmi Engineering College
+                  </span>
+          </a>
+        <nav class="navbar">
+            <ul class="navbar-lists" id="myTopnav">
+                <li>
+                      <i class="fas fa-home"></i>
+                          <a class="navbar-link home-link" href="#">
+                              Home</a>
+                  </li>
+                <li>
+                      <i class="fas fa-user"></i>
+                          <a class="navbar-link about-link" 
+                           href="#about-us-section">
+                              About Us
+                          </a>
+                </li>
+                <li>
+                      <i class="fas fa-envelope"></i>
+                          <a class="navbar-link contact-link" 
+                           href="#contact-form">
+                          Contact Us
+                          </a>
+                  </li>
+                <li>
+                      <i class="fas fa-bullhorn"></i>
+                          <a class="navbar-link service-link" 
+                           href="#notice-bord-sction">
+                          Notice Board
+                          </a>
+                  </li>
+                <li><i class="fas fa-map-marked-alt"></i>
+                      <a class="navbar-link contact-link"
+                       href="#campus-on-map">
+                      Our Campus
+                      </a>
+                  </li>
+            </ul>
+            <a href="javascript:void(0);" 
+               class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </nav>
+    </header>
+    <main>
+        <div class="school-img-container">
+            <div class="img-container">
+                <img src="https://th.bing.com/th/id/R.adde5efee679ccd026dbde4cfb8969c3?rik=TXe%2bbO7tpNmRSg&riu=http%3a%2f%2fwww.rajalakshmi.org%2fimage%2fbanner-1.jpg&ehk=jGrGrW1JV4FHHJAZywUr4GbIM3rLWB0y8%2bhPvtDa%2fx4%3d&risl=&pid=ImgRaw&r=0"
+                     alt="school img" class="school-img">
+                <h1 class="img-title">
+                  Welcome to REC
+                  </h1>
+            </div>
+            <section id="vision">
+                <h2 class="vision-heading">Our Vision</h2>
+                <p>To be an institution of excellence in Engineering, Technology and Management Education & Research. To provide competent and ethical professionals with a concern for society.To impart quality technical education imbibed with proficiency and humane values. To provide right ambience and opportunities for the students to develop into creative, talented and globally competent professionals. To promote research and development in technology and management for the benefit of the society.
+                </p>
+            </section>
+        </div>
+        <br>
+        <div class="main-notice-section" 
+             id="notice-bord-sction" style="display:flex;justify-content:space-evenly;">
+            
+                <div class="notice-bord">
+                    <h2 class="notice-bord-heading">
+                      Campus Notice Board
+                      </h2>
+                    <div>
+                        <ul>
+                            <li>
+                                <i>August 2, 2024:</i>
+                                      Recruitment for Leo, Rotract, Yuva, Unison Clubs for 2024-2025
+                                      <span class="new-text">New</span>
+                            </li>
+                            <li>
+                                <i>August 15, 2024:</i> 
+                                      (Independence Day) Science fair showcasing 
+                                      innovative student projects
+                                      <span class="new-text">New</span>
+                            </li>
+                            <li>
+                                <i>September 9, 2024:</i>
+                                      Inauguration ceremony for 
+                                      the new academic year.(2024-2028)
+                                      <span class="new-text">New</span>
+                            </li>
+                            <li>
+                                <i>March 7,8,9, 2025:</i> 
+                                      Cultural extravaganza featuring
+                                      dance, music, and drama performances. 
+                                      <span class="new-text">New</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Events Section -->
+                <div class="event-card">
+                    <h2 class="event-heading">Upcoming Events</h2>
+                    <div class="event-details">
+                        <div class="event">
+                            <h3>Event Name 1</h3>
+                            <p>Date: November 3, 2024</p>
+                            <p>Time: 9:00 AM - 12:00 PM</p>
+                            <p>Location: Indoor Auditorium</p>
+                            <p>
+                              <strong>Description:</strong> 
+                              Quiz competition.
+                              </p>
+                        </div>
+                        <div class="event">
+                            <h3>Event Name 2</h3>
+                            <p>Date: February 19, 2025</p>
+                            <p>Time: 11:00 AM - 2:00 PM</p>
+                            <p>Location: Sports Ground</p>
+                            <p>
+                                  <strong>Description:</strong> 
+                                  Cricket tournament.
+                              </p>
+                        </div>
+                    </div>
+                </div>
+            
+        </div>
+        <br>
+        <section id="about-us-section">
+            <div class="about-us-container">
+                <h3 class="aboutus-heading">About Institution</h3>
+                <p>
+                    <strong class="subheading"> 
+                          Institution Profile: 
+                      </strong>
+                      Rajalakshmi Engineering College, an autonomous institution affiliated to Anna University, Chennai, was established in the year 1997 under the aegis of Rajalakshmi Educational Trust whose members have had consummate experience in the fields of education and industry. The College has grown from strength to strength in the last 25 years and progressing towards Excellence in Engineering Education, Research and Development.<br>
+                      Started with 3 Under Graduate programmes in Engineering with an annual intake of 180 students in 1997, the College presently offers 18 Under Graduate and 9 Post Graduate programmes including MBA program, with an annual intake of 2070 students. The approval of AICTE and affiliation of the Anna University for such a progressive intake is a standing testimony for the continuous growth of the college over the years. 9 of our departments are recognized as Research Centers of Anna University to conduct Ph.D. and M.S. (By Research) programmes and many scholars have obtained Ph.D. through these research centres.<br>
+                      Ours is one among the few Colleges to receive accreditation for Under Graduate Engineering programmes from the National Board of Accreditation (NBA), New Delhi, as soon as attaining the eligibility to apply for accreditation. The College is accredited by the National Assessment and Accreditation Council (NAAC) with 'A++' Grade. The college has also secured 12(b) status from UGC. Anna University, Chennai has granted Permanent Affiliation for 10 UG courses viz. Aeronautical Engineering, Automobile Engineering, Biomedical Engineering, Biotechnology, Civil Engineering, Computer Science and Engineering, Electronics and Communication Engineering, Electrical and Electronics Engineering, Mechanical Engineering, Information Technology and 4 PG Courses viz. M.Tech - Biotechnology, M.E. Computer Science and Engineering, M.E. Communication Systems and Master of Business Administration.<br>                   
+                      The Department of Scientific and Industrial Research (DSIR), Government of India has recognized the College as a Scientific and Industrial Research Organization (SIRO), considering its potential for Research and Development activities.
+                </p>
+            </div>
+        
+            <div class="our-school-map" id="campus-on-map">
+            <br><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13075.611597171344!2d79.99998016915166!3d13.010015581129185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a528c9ebac84723%3A0x18e2bf88dfefa3ed!2sRajalakshmi%20Engineering%20College!5e0!3m2!1sen!2sin!4v1722151449718!5m2!1sen!2sin" width="750" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            
+            </div>
+        </section>
+
+        <section id="contact-form">
+            <h2 class="contact-form-heading">
+              Contact Registration
+              </h2>
+            <div class="container">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="fullName">
+                          Full Name
+                          </label>
+                        <input type="text" id="fullName" 
+                               name="fullName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email"
+                               name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="text" id="phone" 
+                               name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Review</label>
+                        <textarea id="message" name="message" 
+                                  required>
+                          </textarea>
+                    </div>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; rajalakshmi institutions. All rights reserved.</p>
+    </footer>
+    <script src="rec.js"></script>
+
+</body>
+
+</html>
