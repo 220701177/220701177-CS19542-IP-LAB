@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Map with Hotspots</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .map-container {
+            position: relative;
+            max-width: 80%;
+        }
+        img {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="map-container">
+        <h1>Interactive Map of India</h1>
+        <!-- Step 1 & 10: Define an image of the Indian map and use the usemap attribute -->
+        <img src="india_map.jpeg" alt="Map of India" usemap="#indiaMap" width="800" height="600">
+        
+        <!-- Step 2: Use attribute id to identify the image map -->
+        <map name="indiaMap" id="indiaMap">
+            <!-- Step 3: Define hotspots with area elements -->
+            
+            <!-- Step 7: Rectangular hotspot for Delhi -->
+            <area shape="rect" coords="350,150,400,200" href="https://en.wikipedia.org/wiki/Delhi" alt="Delhi">
+            
+            <!-- Step 8: Polygonal hotspot for Gujarat -->
+            <area shape="poly" coords="200,300,250,350,200,400,150,350" href="https://en.wikipedia.org/wiki/Gujarat" alt="Gujarat">
+            
+            <!-- Step 9: Circular hotspot for Mumbai -->
+            <area shape="circle" coords="300,450,30" href="https://en.wikipedia.org/wiki/Mumbai" alt="Mumbai">
+            
+        </map>
+    </div>
+</body>
+</html>
