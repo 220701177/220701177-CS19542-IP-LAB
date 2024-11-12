@@ -1,0 +1,17 @@
+
+CREATE DATABASE BankDB;
+USE BankDB;
+
+CREATE TABLE EMPDETAILS (
+    EMPID INT PRIMARY KEY,
+    ENAME VARCHAR(50),
+    DESIG VARCHAR(50),
+    DEPT VARCHAR(50),
+    DOJ DATE,
+    SALARY DECIMAL(10, 2)
+);
+
+INSERT INTO EMPDETAILS (EMPID, ENAME, DESIG, DEPT, DOJ, SALARY) VALUES
+(1, 'John Doe', 'Manager', 'Finance', '2018-05-10', 80000),
+(2, 'Jane Smith', 'Analyst', 'Marketing', '2019-07-20', 60000),
+(3, 'Robert Brown', 'Developer', 'IT', '2020-08-15', 50000);
