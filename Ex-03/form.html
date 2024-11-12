@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Registration Form</title>
+    <style>
+        .error {
+            color: red;
+            font-size: 0.9em;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Course Registration Form</h2>
+
+<form id="registrationForm">
+    <div class="form-group">
+        <label for="student_name">Student Name:</label>
+        <input type="text" id="student_name" name="student_name">
+        <span class="error" id="error_student_name"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="roll_no">Roll Number:</label>
+        <input type="text" id="roll_no" name="roll_no">
+        <span class="error" id="error_roll_no"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender">
+            <option value="">Select Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+        <span class="error" id="error_gender"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="year">Year:</label>
+        <select id="year" name="year">
+            <option value="">Select Your Current Year</option>
+            <option value="male">I</option>
+            <option value="female">II</option>
+            <option value="other">III</option>
+            <option value="other">IV</option>
+        </select>
+        <span class="error" id="error_year"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="department">Department:</label>
+        <input type="text" id="department" name="department">
+        <span class="error" id="error_department"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="section">Section:</label>
+        <input type="text" id="section" name="section">
+        <span class="error" id="error_section"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="mobile_number">Mobile Number:</label>
+        <input type="text" id="mobile_number" name="mobile_number">
+        <span class="error" id="error_mobile_number"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="e-mail_id">Email ID:</label>
+        <input type="email" id="e-mail_id" name="e-mail_id">
+        <span class="error" id="error_e-mail_id"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address">
+        <span class="error" id="error_address"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city">
+        <span class="error" id="error_city"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="country">Country:</label>
+        <input type="text" id="country" name="country">
+        <span class="error" id="error_country"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="pincode">Pincode:</label>
+        <input type="text" id="pincode" name="pincode">
+        <span class="error" id="error_pincode"></span>
+    </div>
+
+    <button type="submit">Register</button>
+</form>
+
+<script>
+    document.getElementById('registrationForm').addEventListener('submit', function(event) {
+        let isValid = true;
+
+       
+        const errors = document.querySelectorAll('.error');
+        errors.forEach(error => error.textContent = '');
+
+        
+        const studentName = document.getElementById('student_name').value.trim();
+        if (studentName === '') {
+            document.getElementById('error_student_name').textContent = 'Student Name is required';
+            isValid = false;
+        }
+
+        
+        const rollNo = document.getElementById('roll_no').value.trim();
+        if (rollNo === '') {
+            document.getElementById('error_roll_no').textContent = 'Roll Number is required';
+            isValid = false;
+        }
+
+        
+        const gender = document.getElementById('gender').value;
+        if (gender === '') {
+            document.getElementById('error_gender').textContent = 'Gender is required';
+            isValid = false;
+        }
+
+       
+        const year = document.getElementById('year').value;
+        if (year === ''){
+            document.getElementById('error_year').textContent = 'Year must be between I and IV';
+            isValid = false;
+        }
+
+        
+        const department = document.getElementById('department').value.trim();
+        if (department === '') {
+            document.getElementById('error_department').textContent = 'Department is required';
+            isValid = false;
+        }
+
+        
+        const section = document.getElementById('section').value.trim();
+        if (section === '') {
+            document.getElementById('error_section').textContent = 'Section is required';
+            isValid = false;
+        }
+
+        
+        const mobileNumber = document.getElementById('mobile_number').value.trim();
+        const mobileNumberPattern = /^[0-9]{10}$/;
+        if (mobileNumber === '' || !mobileNumberPattern.test(mobileNumber)) {
+            document.getElementById('error_mobile_number').textContent = 'Mobile Number must be 10 digits';
+            isValid = false;
+        }
+
+        
+        const emailId = document.getElementById('e-mail_id').value.trim();
+        if (emailId === '' || !emailId.includes('@')) {
+            document.getElementById('error_e-mail_id').textContent = 'A valid Email ID is required';
+            isValid = false;
+        }
+
+        const address = document.getElementById('address').value.trim();
+        if (address === '') {
+            document.getElementById('error_address').textContent = 'Address is required';
+            isValid = false;
+        }
+
+        
+        const city = document.getElementById('city').value.trim();
+        if (city === '') {
+            document.getElementById('error_city').textContent = 'City is required';
+            isValid = false;
+        }
+
+        
+        const country = document.getElementById('country').value.trim();
+        if (country === '') {
+            document.getElementById('error_country').textContent = 'Country is required';
+            isValid = false;
+        }
+
+        const pincode = document.getElementById('pincode').value.trim();
+        const pincodePattern = /^[0-9]{6}$/;
+        if (pincode === '' || !pincodePattern.test(pincode)) {
+            document.getElementById('error_pincode').textContent = 'Pincode must be 6 digits';
+            isValid = false;
+        }
+
+        if (isValid) {
+            
+            if (confirm('Are you sure you want to register?')) {
+                alert('Registration successful!');
+            }
+            
+            event.preventDefault();
+        } else {
+            event.preventDefault(); 
+        }
+    });
+</script>
+
+</body>
+</html>
