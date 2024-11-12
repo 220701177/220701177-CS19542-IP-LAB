@@ -1,0 +1,25 @@
+/* Services.css */
+.services-section {
+    background-color: #111;
+    color: #fff;
+    padding: 50px 0;
+}
+
+.service-card {
+    background-color: #222;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px;
+    color: #fff;
+}
+
+.service-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.service-card h5 {
+    margin-top: 15px;
+    color: #00FF00;
+}

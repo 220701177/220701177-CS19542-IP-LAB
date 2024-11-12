@@ -1,0 +1,15 @@
+/* HeroSection.css */
+.hero-section {
+    background-color: #000;
+    color: #fff;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero-section .highlight {
+    color: #00FF00; /* Highlighted React text */
+}
+
+.hero-section button {
+    margin-top: 20px;
+}
