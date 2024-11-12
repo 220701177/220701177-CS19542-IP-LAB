@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>XMLHttpRequest Example</title>
+</head>
+<body>
+    <h1>Retrieve Data from Text File</h1>
+    <button onclick="loadData()">Load Data</button>
+    <div id="rec"></div>
+
+    <script>
+        function loadData() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("rec").innerText = this.responseText;
+                }
+            };
+            xhttp.open("GET", "rec.txt", true);
+            xhttp.send();
+        }
+    </script>
+</body>
+</html>
