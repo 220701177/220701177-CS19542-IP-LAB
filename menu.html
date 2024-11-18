@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MYCAFÉ - Menu</title>
+  <link rel="stylesheet" href="stylee.css">
+  <style>
+    body {
+    background-image: url('https://img.freepik.com/premium-photo/night-scene-empty-table-with-restaurant-background-ads_31965-623916.jpg?ga=GA1.1.165203865.1726297893&semt=ais_hybrid');
+    background-size: cover; /* Ensures the image covers the entire page */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center center; /* Centers the image */
+    background-attachment: fixed; /* Makes the background stay in place when scrolling */
+    height: 100%; /* Ensures that the image fills the page */
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; /* Ensures full viewport height coverage */
+}
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  }
+  
+  nav ul li {
+  display: inline;
+  margin-right: 15px;
+  }
+  
+  nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  }
+  footer {
+  text-align: center;
+  margin: 20px 0;
+  color: black; /* Footer text color */
+  font-size: 18px; /* Increase the font size */
+  font-weight: bold; /* Make the text bold */
+}
+
+footer a {
+  color: black;
+  text-decoration: none;
+  font-size: 18px; /* Increase the font size for links */
+  font-weight: bold; /* Make the links bold */
+}
+
+  </style>
+  
+</head>
+<body>
+  <header>
+    <h1>MYCAFÉ Menu</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="reservation.html">Table Reservation</a></li>
+        <li><a href="prebooking.html">Pre-book Food</a></li>
+        <li><a href="contact.html">Location & Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  
+  <!-- New Navigation for Menu Sections -->
+  <nav class="menu-nav">
+    <ul>
+      <li><a href="#" id="show-appetizers">Appetizers</a></li>
+      <li><a href="#" id="show-main-course">Main Course</a></li>
+      <li><a href="#" id="show-dessert">Dessert</a></li>
+      <li><a href="#" id="show-beverages">Beverages</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <!-- Appetizers Section -->
+    <div id="appetizers-section" class="menu-section">
+      <h2 class="appetizers-header">Appetizers</h2>
+      <ul id="appetizers">
+        <div class="menu-item">
+          <img src="https://img.freepik.com/free-photo/front-view-cooked-pastry-along-with-red-white-sauces-brown-wooden-round-desk-grey-floor_140725-14395.jpg?ga=GA1.1.165203865.1726297893&semt=ais_hybrid" alt="Garlic Bread">
+          <div class="menu-overlay">
+            <p>Garlic Bread<br>250 Rs</p>
+          </div>
+        </div>
+        <div class="menu-item">
+          <img src="https://img.freepik.com/premium-photo/caesar-salad-with-crisp-salad-base-yummy-delicious-caesar-salad-gourmet-salad-photography_1020697-670725.jpg?ga=GA1.1.165203865.1726297893&semt=ais_hybrid" alt="Caesar Salad">
+          <div class="menu-overlay">
+            <p>Caesar Salad<br>200 Rs</p>
+          </div>
+        </div>
+        <div class="menu-item">
+          <img src="https://img.freepik.com/premium-photo/highquality-plate-appetizers-dark-room-with-sparklecore-style_621955-40196.jpg?ga=GA1.1.165203865.1726297893&semt=ais_hybrid" alt="Canapés">
+          <div class="menu-overlay">
+            <p>Canapés<br>300 Rs</p>
+          </div>
+        </div>
+        <div class="menu-item">
+          <img src="https://img.freepik.com/free-photo/italian-sandwiches-bruschetta-with-cheese-dry-tomatoes-basil_114579-19398.jpg?ga=GA1.1.165203865.1726297893&semt=ais_hybrid" alt="Bruschetta">
+          <div class="menu-overlay">
+            <p>Bruschetta<br>275 Rs</p>
+          </div>
+        </div>
+      </ul>
+    </div>
+
+    <!-- Main Course Section -->
+    <div id="main-course-section" class="menu-section" style="display: none;">
+        <h2 class="main-course-header">Main Course</h2>
+        <ul id="main-course">
+          <div class="menu-item">
+            <img src="https://img.freepik.com/premium-photo/plate-pasta-with-mushrooms-herbs-it_985633-11693.jpg?ga=GA1.1.165203865.1726297893&semt=ais_hybrid" alt="Penne Alfredo">
+            <div class="menu-overlay">
+              <p>Penne Alfredo<br>375 Rs</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <img src="https://img.freepik.com/free-photo/ai-generated-pasta_23-2150637305.jpg?ga=GA1.1.165203865.1726297893&semt=ais_hybrid" alt="Pink Sauce  Pasta">
+            <div class="menu-overlay">
+              <p>Pink Sauce Pasta<br>350 Rs</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <img src="https://img.freepik.com/premium-photo/dish-with-chicken-vegetables-chopsticks_1293074-223511.jpg?ga=GA1.1.165203865.1726297893&semt=ais_hybrid" alt="Kung Pao">
+            <div class="menu-overlay">
+              <p>Kung Pao<br>390 Rs</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <img src="https://img.freepik.com/premium-photo/steak-with-herbs-top-plate-food-it_323049-78.jpg?ga=GA1.1.165203865.1726297893&semt=ais_hybrid" alt="Steak">
+            <div class="menu-overlay">
+              <p>Steak<br>445 Rs</p>
+            </div>
+          </div>
+      </ul>
+    </div>
+
+    <!-- Dessert Section -->
+    <div id="dessert-section" class="menu-section" style="display: none;">
+      <h2 class="dessert-header">Dessert</h2>
+      <ul id="dessert">
+        <div class="menu-item">
+          <img src="https://img.freepik.com/free-photo/cheesecake-slice-new-york-style-classical-cheese-cake-wooden-background-slice-tasty-cake-white-plate-served-with-dessert-fork_123827-29233.jpg?ga=GA1.1.165203865.1726297893&semt=ais_hybrid" alt="Cheesecakeo">
+          <div class="menu-overlay">
+            <p>Cheesecake<br>349 Rs</p>
+          </div>
+        </div>
+        <div class="menu-item">
+          <img src="https://media.istockphoto.com/id/1248489319/photo/tiramisu-cake-with-mint.jpg?b=1&s=612x612&w=0&k=20&c=cY5ZWTnc88zvTZUNf_yjQJ9EOBHbySAlITqK0DIVD28=" alt="Tiramisu">
+          <div class="menu-overlay">
+            <p>Tiramisu<br>275 Rs</p>
+          </div>
+        </div>
+        <div class="menu-item">
+          <img src="https://img.freepik.com/free-photo/freshly-baked-baklava-rustic-wooden-board-generated-by-ai_188544-53652.jpg?ga=GA1.1.165203865.1726297893&semt=ais_hybrid" alt="Baklava">
+          <div class="menu-overlay">
+            <p>Baklava<br>250 Rs</p>
+          </div>
+        </div>
+        <div class="menu-item">
+          <img src="https://img.freepik.com/premium-photo/piece-cake-with-chocolate-sauce-it_1153121-2852.jpg?ga=GA1.1.165203865.1726297893&semt=ais_hybrid" alt="Brownie">
+          <div class="menu-overlay">
+            <p>Brownie<br>245 Rs</p>
+          </div>
+        </div>
+    </ul>
+  </div>
+  
+        <!-- Beverages Section -->
+    <div id="beverages-section" class="menu-section" style="display: none;">
+      <h2 class="beverages-header">Beverages</h2>
+      <ul id="beverages">
+        <div class="menu-item">
+          <img src="https://img.freepik.com/free-photo/photo-cup-coffee-table-background_1409-4982.jpg?ga=GA1.1.165203865.1726297893&semt=ais_hybrid" alt="Cappuccino">
+          <div class="menu-overlay">
+            <p>Cappuccino<br>245 Rs</p>
+          </div>
+        </div>
+        <div class="menu-item">
+          <img src="https://img.freepik.com/free-photo/caramel-latte-with-chocolade-table_140725-4.jpg?ga=GA1.1.165203865.1726297893&semt=ais_hybrid" alt="Latte">
+          <div class="menu-overlay">
+            <p>Latte<br>250 Rs</p>
+          </div>
+        </div>
+        <div class="menu-item">
+          <img src="https://img.freepik.com/free-photo/strawberry-mojito-table_140725-848.jpg?ga=GA1.1.165203865.1726297893&semt=ais_hybrid" alt="Mocktail">
+          <div class="menu-overlay">
+            <p>Mocktail<br>245 Rs</p>
+          </div>
+        </div>
+        <div class="menu-item">
+          <img src="https://img.freepik.com/premium-photo/delicious-affogato-dessert-with-espresso-vanilla-ice-cream_1272857-96450.jpg?ga=GA1.1.165203865.1726297893&semt=ais_hybrid" alt="Affogato">
+          <div class="menu-overlay">
+            <p>Affogato<br>365 Rs</p>
+          </div>
+        </div>
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+    <p>Contact us for more information.</p>
+  </footer>
+
+  <script>
+    // JavaScript for Menu Section Navigation
+document.getElementById('show-appetizers').addEventListener('click', function(event) {
+    event.preventDefault();
+    showSection('appetizers-section');
+});
+
+document.getElementById('show-main-course').addEventListener('click', function(event) {
+    event.preventDefault();
+    showSection('main-course-section');
+});
+
+document.getElementById('show-dessert').addEventListener('click', function(event) {
+    event.preventDefault();
+    showSection('dessert-section');
+});
+
+document.getElementById('show-beverages').addEventListener('click', function(event) {
+    event.preventDefault();
+    showSection('beverages-section');
+});
+
+function showSection(sectionId) {
+    // Hide all sections
+    document.getElementById('appetizers-section').style.display = 'none';
+    document.getElementById('main-course-section').style.display = 'none';
+    document.getElementById('dessert-section').style.display = 'none';
+    document.getElementById('beverages-section').style.display = 'none';
+    
+    // Show the selected section
+    document.getElementById(sectionId).style.display = 'block';
+}
+
+// Initially show the Appetizers section
+document.getElementById('appetizers-section').style.display = 'block';
+
+
+  </script>
+</body>
+</html>

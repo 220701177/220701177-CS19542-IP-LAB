@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MYCAFÉ - Pre-book Food</title>
+  <link rel="stylesheet" href="stylee.css">
+  <style>
+    body {
+      background-image: url('https://img.freepik.com/premium-photo/night-scene-empty-table-with-restaurant-background-ads_31965-623916.jpg?ga=GA1.1.165203865.1726297893&semt=ais_hybrid');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-attachment: fixed;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Pre-book Food at MYCAFÉ</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="reservation.html">Table Reservation</a></li>
+        <li><a href="prebooking.html">Pre-book Food</a></li>
+        <li><a href="contact.html">Location & Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Select Your Dish and Quantity</h2>
+    
+    <form action="prebooking.php" method="post" id="prebook-form">
+      <div class="customer-info-container">
+          <label for="customer-name">Your Name:</label>
+          <input type="text" id="customer-name" name="customer-name" placeholder="Enter your name" required> 
+          <label for="ready-time">At what time should your food be ready? <br>(Between 8 AM and 11 PM)</label>
+          <input type="time" id="ready-time" name="ready-time" required>
+      </div>
+
+      <h2>Appetizers</h2>
+      <div class="Menu-item">
+        <input type="checkbox" id="garlic-bread" name="garlic-bread" value="Garlic Bread">
+        <label for="garlic-bread">Garlic Bread <br>250 Rs</label><br>
+        <input type="number" id="qty-garlic-bread" name="qty-garlic-bread" min="1" placeholder="Qty">
+        <img src="https://img.freepik.com/free-photo/front-view-cooked-pastry-along-with-red-white-sauces-brown-wooden-round-desk-grey-floor_140725-14395.jpg?ga=GA1.1.165203865.1726297893&semt=ais_hybrid" alt="Garlic Bread">
+      </div>
+
+      <div class="Menu-item">
+        <input type="checkbox" id="caesar-salad" name="caesar-salad" value="Caesar Salad">
+        <label for="caesar-salad">Caesar Salad<br>200 Rs</label><br>
+        <input type="number" id="qty-caesar-salad" name="qty-caesar-salad" min="1" placeholder="Qty">
+        <img src="https://img.freepik.com/premium-photo/caesar-salad-with-crisp-salad-base-yummy-delicious-caesar-salad-gourmet-salad-photography_1020697-670725.jpg?ga=GA1.1.165203865.1726297893&semt=ais_hybrid" alt="Caesar Salad">
+      </div>
+
+      <div class="Menu-item">
+        <input type="checkbox" id="canapes" name="canapes" value="Canapés">
+        <label for="canapes">Canapés<br>300 Rs</label><br>
+        <input type="number" id="qty-canapes" name="qty-canapes" min="1" placeholder="Qty">
+        <img src="https://img.freepik.com/premium-photo/highquality-plate-appetizers-dark-room-with-sparklecore-style_621955-40196.jpg?ga=GA1.1.165203865.1726297893&semt=ais_hybrid" alt="Canapés">
+      </div>
+
+      <div class="Menu-item">
+        <input type="checkbox" id="bruschetta" name="bruschetta" value="Bruschetta">
+        <label for="bruschetta">Bruschetta<br>275 Rs</label><br>
+        <input type="number" id="qty-bruschetta" name="qty-bruschetta" min="1" placeholder="Qty">
+        <img src="https://img.freepik.com/free-photo/italian-sandwiches-bruschetta-with-cheese-dry-tomatoes-basil_114579-19398.jpg?ga=GA1.1.165203865.1726297893&semt=ais_hybrid" alt="Bruschetta">
+      </div>
+
+      <h2>Main Course</h2>
+      <div class="Menu-item">
+        <input type="checkbox" id="penne-alfredo" name="penne-alfredo" value="Penne Alfredo">
+        <label for="penne-alfredo">Penne Alfredo<br>375 Rs</label><br>
+        <input type="number" id="qty-penne-alfredo" name="qty-penne-alfredo" min="1" placeholder="Qty">
+        <img src="https://img.freepik.com/premium-photo/plate-pasta-with-mushrooms-herbs-it_985633-11693.jpg?ga=GA1.1.165203865.1726297893&semt=ais_hybrid" alt="Penne Alfredo">
+      </div>
+
+      <div class="Menu-item">
+        <input type="checkbox" id="pink-sauce-pasta" name="pink-sauce-pasta" value="Pink Sauce Pasta">
+        <label for="pink-sauce-pasta">Pink Sauce Pasta<br>350 Rs</label><br>
+        <input type="number" id="qty-pink-sauce-pasta" name="qty-pink-sauce-pasta" min="1" placeholder="Qty">
+        <img src="https://img.freepik.com/free-photo/ai-generated-pasta_23-2150637305.jpg?ga=GA1.1.165203865.1726297893&semt=ais_hybrid" alt="Pink Sauce Pasta">
+      </div>
+
+      <div class="Menu-item">
+        <input type="checkbox" id="kung-pao" name="kung-pao" value="Kung Pao">
+        <label for="kung-pao">Kung Pao<br>390 Rs</label><br>
+        <input type="number" id="qty-kung-pao" name="qty-kung-pao" min="1" placeholder="Qty">
+        <img src="https://img.freepik.com/premium-photo/dish-with-chicken-vegetables-chopsticks_1293074-223511.jpg?ga=GA1.1.165203865.1726297893&semt=ais_hybrid" alt="Kung Pao">
+      </div>
+
+      <div class="Menu-item">
+        <input type="checkbox" id="steak" name="steak" value="Steak">
+        <label for="steak">Steak<br>445 Rs</label><br>
+        <input type="number" id="qty-steak" name="qty-steak" min="1" placeholder="Qty">
+        <img src="https://img.freepik.com/premium-photo/steak-with-herbs-top-plate-food-it_323049-78.jpg?ga=GA1.1.165203865.1726297893&semt=ais_hybrid" alt="Steak">
+      </div>
+
+      <h2>Desserts</h2>
+      <div class="Menu-item">
+        <input type="checkbox" id="cheesecake" name="cheesecake" value="Cheesecake">
+        <label for="cheesecake">Cheesecake<br>349 Rs</label><br>
+        <input type="number" id="qty-cheesecake" name="qty-cheesecake" min="1" placeholder="Qty">
+        <img src="https://img.freepik.com/free-photo/cheesecake-slice-new-york-style-classical-cheese-cake-wooden-background-slice-tasty-cake-white-plate-served-with-dessert-fork_123827-29233.jpg?ga=GA1.1.165203865.1726297893&semt=ais_hybrid" alt="Cheesecake">
+      </div>
+
+      <div class="Menu-item">
+        <input type="checkbox" id="tiramisu" name="tiramisu" value="Tiramisu">
+        <label for="tiramisu">Tiramisu<br>275 Rs</label><br>
+        <input type="number" id="qty-tiramisu" name="qty-tiramisu" min="1" placeholder="Qty">
+        <img src="https://media.istockphoto.com/id/1248489319/photo/tiramisu-cake-with-mint.jpg?b=1&s=612x612&w=0&k=20&c=cY5ZWTnc88zvTZUNf_yjQJ9EOBHbySAlITqK0DIVD28=" alt="Tiramisu">
+      </div>
+
+      <div class="Menu-item">
+        <input type="checkbox" id="baklava" name="baklava" value="Baklava">
+        <label for="baklava">Baklava<br>250 Rs</label><br>
+        <input type="number" id="qty-baklava" name="qty-baklava" min="1" placeholder="Qty">
+        <img src="https://img.freepik.com/free-photo/freshly-baked-baklava-rustic-wooden-board-generated-by-ai_188544-53652.jpg?ga=GA1.1.165203865.1726297893&semt=ais_hybrid" alt="Baklava">
+      </div>
+
+      <div class="Menu-item">
+        <input type="checkbox" id="brownie" name="brownie" value="Brownie">
+        <label for="brownie">Brownie<br>245 Rs</label><br>
+        <input type="number" id="qty-brownie" name="qty-brownie" min="1" placeholder="Qty">
+        <img src="https://img.freepik.com/premium-photo/piece-cake-with-chocolate-sauce-it_1153121-2852.jpg?ga=GA1.1.165203865.1726297893&semt=ais_hybrid" alt="Brownie">
+      </div>
+
+      <h2>Beverages</h2>
+      <div class="Menu-item">
+        <input type="checkbox" id="cappuccino" name="cappuccino" value="Cappuccino">
+        <label for="cappuccino">Cappuccino<br>250 Rs</label><br>
+        <input type="number" id="qty-cappuccino" name="qty-cappuccino" min="1" placeholder="Qty">
+        <img src="https://img.freepik.com/free-photo/photo-cup-coffee-table-background_1409-4982.jpg?ga=GA1.1.165203865.1726297893&semt=ais_hybrid" alt="Cappuccino">
+      </div>
+
+      <div class="Menu-item">
+        <input type="checkbox" id="latte" name="latte" value="Latte">
+        <label for="latte">Latte<br>265 Rs</label><br>
+        <input type="number" id="qty-latte" name="qty-latte" min="1" placeholder="Qty">
+        <img src="https://img.freepik.com/free-photo/caramel-latte-with-chocolade-table_140725-4.jpg?ga=GA1.1.165203865.1726297893&semt=ais_hybrid" alt="Latte">
+      </div>
+
+      <div class="Menu-item">
+        <input type="checkbox" id="mocktail" name="mocktail" value="Mocktail">
+        <label for="mocktail">Mocktail<br>345 Rs</label><br>
+        <input type="number" id="qty-mocktail" name="qty-mocktail" min="1" placeholder="Qty">
+        <img src="https://img.freepik.com/free-photo/strawberry-mojito-table_140725-848.jpg?ga=GA1.1.165203865.1726297893&semt=ais_hybrid" alt="Mocktail">
+      </div>
+
+      <div class="Menu-item">
+        <input type="checkbox" id="affogato" name="affogato" value="Affogato">
+        <label for="affogato">Affogato<br>365 Rs</label><br>
+        <input type="number" id="qty-affogato" name="qty-affogato" min="1" placeholder="Qty">
+        <img src="https://img.freepik.com/premium-photo/delicious-affogato-dessert-with-espresso-vanilla-ice-cream_1272857-96450.jpg?ga=GA1.1.165203865.1726297893&semt=ais_hybrid" alt="Affogato">
+      </div>
+
+      <br>
+      <button type="submit">Pre-book Now</button>
+    </form>
+  </main>
+
+  <style>
+    /* Styles for nav, buttons, form */
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+    nav ul li {
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 20px;
+    }
+    button {
+      margin-top: 20px;
+    }
+    button[type="submit"] {
+      background-color: rgb(86, 46, 23);
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      font-family: cursive;
+    }
+    button[type="submit"]:hover {
+      background-color: #b66540;
+      font-family: cursive;
+    }
+    .customer-info-container {
+      border: 2px solid white;
+      backdrop-filter: blur(10px);
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      font-family: cursive;
+      width: 40%;
+      margin: 0 auto;
+    }
+    .customer-info-container input {
+      width: calc(100% - 20px);
+      padding: 8px;
+      margin-bottom: 15px;
+      border: 1px solid #b45f5f;
+      border-radius: 5px;
+      font-family: cursive;
+    }
+    footer {
+      text-align: center;
+      margin: 20px 0;
+      color: black;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    footer a {
+      color: black;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  </style>
+
+  <footer>
+    <p>We are waiting for you!</p>
+  </footer>
+
+  <script>
+    document.getElementById('prebook-form').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent form submission
+
+      const customerName = document.getElementById('customer-name').value.trim();
+      const readyTime = document.getElementById('ready-time').value;
+      const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+      let selectedDishes = [];
+      let totalCost = 0;
+      let validSubmission = true;
+
+      // Ensure customer name is provided
+      if (!customerName) {
+        alert("Please enter your name.");
+        validSubmission = false;
+      }
+
+      // Ensure ready time is between 8 AM and 11 PM
+      if (!readyTime) {
+        alert("Please select the time when you want your food to be ready.");
+        validSubmission = false;
+      } else {
+        const time = readyTime.split(":");
+        const hours = parseInt(time[0], 10);
+        if (hours < 8 || hours > 23) {
+          alert("Please select a time between 8 AM and 11 PM.");
+          validSubmission = false;
+        }
+      }
+
+      // Define prices for each dish
+      const prices = {
+        'garlic-bread': 250,
+        'caesar-salad': 200,
+        'canapes': 300,
+        'bruschetta': 275,
+        'penne-alfredo': 375,
+        'pink-sauce-pasta': 350,
+        'kung-pao': 390,
+        'steak': 445,
+        'cheesecake': 349,
+        'tiramisu': 275,
+        'baklava': 250,
+        'brownie': 245,
+        'cappuccino': 250,
+        'latte': 265,
+        'mocktail': 345,
+        'affogato': 365
+      };
+
+      // Validate dish selection and calculate total
+      checkboxes.forEach(checkbox => {
+        const quantityInput = document.getElementById(`qty-${checkbox.id}`);
+        const quantity = parseInt(quantityInput.value);
+        if (quantity > 0) {
+          const dishPrice = prices[checkbox.id] * quantity;
+          selectedDishes.push({ dish: checkbox.value, quantity, price: dishPrice });
+          totalCost += dishPrice;
+        } else {
+          alert(`Please enter a valid quantity for ${checkbox.value}`);
+          validSubmission = false;
+        }
+      });
+
+      // Ensure at least one dish is selected
+      if (selectedDishes.length === 0) {
+        alert("Please select at least one dish.");
+        validSubmission = false;
+      }
+
+      if (validSubmission) {
+        let confirmationMessage = `Your pre-order has been placed for:\n\nName: ${customerName}\nReady Time: ${readyTime}\n`;
+        selectedDishes.forEach(dish => {
+          confirmationMessage += `${dish.quantity} x ${dish.dish} (Total: ${dish.price} Rs)\n`;
+        });
+        confirmationMessage += `\nTotal Cost: ${totalCost} Rs`;
+
+        alert(confirmationMessage);
+        document.getElementById('prebook-form').submit(); // Submit the form
+      }
+    });
+  </script>
+</body>
+</html>
+ 
